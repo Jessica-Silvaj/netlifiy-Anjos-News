@@ -1,7 +1,7 @@
 // Lista de eventos com descrição e imagem
 const eventos = [
-    { data: '2025-02-18T00:00:00', nome: 'Evento 2 - Miss CDanjos', descricao: 'O maior concurso de beleza!', imagem: '../assets/site/images/noticias/noticias.png' },
-    { data: '2025-03-05T00:00:00', nome: 'Evento 3 - Miss CDanjos', descricao: 'Descubra as novas candidatas!', imagem: '../assets/site/images/noticias/noticias.png' },
+    // { data: '2025-02-18T00:00:00', nome: 'Evento 2 - Miss CDanjos', descricao: 'O maior concurso de beleza!', imagem: '../assets/site/images/noticias/noticias.png' },
+    // { data: '2025-03-05T00:00:00', nome: 'Evento 3 - Miss CDanjos', descricao: 'Descubra as novas candidatas!', imagem: '../assets/site/images/noticias/noticias.png' },
 ];
 
 // Referência ao modal
