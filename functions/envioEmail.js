@@ -65,7 +65,7 @@ exports.handler = async (event) => {
                         ${mensagem}
                     </blockquote>
                     <p style="color: #777; font-size: 12px;">📅 Enviado em: ${new Date().toLocaleString("pt-BR")}</p>
-                    <p style="color: #777; font-size: 12px;">🌐 Enviado através do site: <a href="https://anjosnewscda.netlify.app/" target="_blank">https://anjosnewscda.netlify.app/</a></p>
+                    <p style="color: #777; font-size: 12px;">🌐 Enviado através do site</p>
                 </div>
             `,
         };
