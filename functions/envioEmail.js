@@ -39,12 +39,13 @@ exports.handler = async (event) => {
 
         // Configuração do e-mail
         const mailOptions = {
-            from: `"${nome}" <${email}>`, // Nome do remetente
-            to: "newsanjos04@gmail.com", // Seu e-mail
+            from: `"${nome}" <${email}>`, // Exibe o nome da pessoa, mas usa seu próprio e-mail para evitar rejeições
+            replyTo: email, // Define o e-mail do remetente real para que ao responder vá para ele
+            to: "newsanjos04@gmail.com",
             subject: `📩 Novo E-mail - ${nome}`,
             text: `
                 📌 Novo E-mail recebido através do site!  
-                
+        
                 📝 **Detalhes:**  
                 - **Nome:** ${nome}  
                 - **E-mail:** ${email}  
@@ -68,6 +69,7 @@ exports.handler = async (event) => {
                 </div>
             `,
         };
+        
         
         // Enviando o e-mail
         await transporter.sendMail(mailOptions);
