@@ -796,11 +796,11 @@ a.arearestrita {
 /* Grid Responsivo */
 .zodiac-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste dinâmico */
-    gap: 15px;
+    grid-template-columns: repeat(4, 1fr); /* Exibe 4 por linha */
+    gap: 20px;
     justify-items: center;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }
 
 /* Card dos Signos */
@@ -813,8 +813,8 @@ a.arearestrita {
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
     text-align: center;
-    width: 220px; /* Ajustado para melhor encaixe */
-    height: auto; /* Permite altura dinâmica */
+    width: 250px; /* Aumentado para melhor destaque */
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -824,17 +824,17 @@ a.arearestrita {
 
 /* Imagem dos Signos */
 .zodiac-card img {
-    width: 100px;
-    height: 100px;
+    width: 120px; /* Aumentado */
+    height: 120px; /* Aumentado */
     object-fit: contain;
     margin-bottom: 10px;
 }
 
 /* Nome do Signo */
 .zodiac-card strong {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     color: #fff;
-    margin-top: 10px;
+    margin-top: -10px;
 }
 
 /* Descrição do Signo */
@@ -869,8 +869,15 @@ a.arearestrita {
 
 /* Responsividade */
 @media (max-width: 1024px) {
+    .zodiac-container {
+        grid-template-columns: repeat(3, 1fr); /* Exibe 3 por linha */
+    }
     .zodiac-card {
-        width: 200px;
+        width: 220px;
+    }
+    .zodiac-card img {
+        width: 110px;
+        height: 110px;
     }
 }
 
@@ -878,9 +885,12 @@ a.arearestrita {
     .zodiac-container {
         grid-template-columns: repeat(2, 1fr); /* Exibe 2 por linha */
     }
-
     .zodiac-card {
-        width: 180px;
+        width: 200px;
+    }
+    .zodiac-card img {
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -888,10 +898,43 @@ a.arearestrita {
     .zodiac-container {
         grid-template-columns: repeat(1, 1fr); /* Exibe 1 por linha */
     }
-
     .zodiac-card {
         width: 90%; /* Adapta ao tamanho da tela */
     }
+    .zodiac-card img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .separador {
