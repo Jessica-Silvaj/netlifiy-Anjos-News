@@ -595,26 +595,25 @@ a.arearestrita {
     margin-top: -10px;
     margin-left: 20px;
     margin-right: 20px;
-    perspective: 1500px; /* Adiciona a perspectiva 3D */
+    perspective: 1500px;
 }
 
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 1200px; /* Define um limite para evitar esticar demais em telas grandes */
+    max-width: 1200px;
     margin: 0 auto;
-    overflow: visible; /* Evita rolagem lateral */
+    overflow: hidden;
 }
 
-.carousel-track {
+.slick-carousel {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    gap: 1rem; /* Ajusta o espaçamento entre os itens */
-    justify-content: center; /* Garante alinhamento */
+    justify-content: center;
+    gap: 1rem;
 }
 
 .carousel-item {
-    flex: 0 0 30%; /* Define um tamanho fixo para cada item */
+    flex: 0 0 30%;
     padding: 1rem;
     text-align: center;
     box-sizing: border-box;
@@ -626,116 +625,72 @@ a.arearestrita {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 10px;
 }
 
 .carousel-item img {
     width: 100%;
-    max-width: 400px; /* Mantém um tamanho adequado */
+    max-width: 900px;
     height: auto;
     border-radius: 10px;
-    margin-bottom: 1rem;
-    margin-top: -10px;
+    margin-bottom: 10px;
+    object-fit: contain;
+    display: block;
 }
 
 .carousel-item:hover {
-    transform: none; /* Remove o zoom e a rotação */
     box-shadow: 0 12px 24px var(--box-shadow);
-    filter: brightness(1.2); /* Aumenta o brilho para destacar */
+    filter: brightness(1.2);
 }
 
 .carousel h3 {
     font-size: 1.5rem;
     color: #fff;
-    margin-top: 10px;
-    line-height: 1.8;
 }
 
 .carousel p {
-    font-size: 14px;  
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.95);
-    line-height: 1.8;
     padding: 1rem 0;
 }
 
 .btn-form {
-    margin-top: -5px;
-    margin-left: 10px;
-    display: inline-block;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
 
 .btn-form a {
-    padding: 0.8rem 3rem;
-    font-size: 1.7rem;
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
     color: #fff;
     background: var(--amarelo);
     border-radius: 0.5rem;
-    box-shadow: var(--box-shadow);
     text-decoration: none;
     transition: background 0.3s ease, filter 0.2s ease;
-    margin-bottom: 10px;
-    filter: brightness(1); /* Mantém a visibilidade padrão */
 }
-
 
 .btn-form a:hover {
     background: var(--black);
-    filter: brightness(1.3); /* Deixa mais claro ao passar o mouse */
+    filter: brightness(1.3);
 }
 
 /* Responsividade */
 @media (max-width: 1024px) {
-    .carousel-track {
-        flex-wrap: wrap; /* Permite que os itens quebrem linha */
-    }
-
     .carousel-item {
-        flex: 0 0 48%; /* Evita que os itens fiquem muito pequenos */
+        flex: 0 0 48%;
         max-width: 90%;
-    }
-
-    .carousel h3 {
-        font-size: 1.4rem;
-    }
-
-    .carousel p {
-        font-size: 1rem;
-    }
-
-    .btn-form {
-        width: 100%;
-        display: flex;
-        justify-content: center; /* Centraliza os botões */
-    }
-
-    .btn-form a {
-        font-size: 1.4rem;
-        padding: 0.8rem 2rem;
-        white-space: nowrap; /* Evita quebra de linha no botão */
     }
 }
 
 @media (max-width: 768px) {
-    .carousel-track {
-        flex-direction: column; /* Empilha os itens */
+    .slick-carousel {
+        flex-direction: column;
         align-items: center;
     }
-
     .carousel-item {
         flex: 0 0 80%;
-        max-width: 300px; /* Evita esticar demais */
-    }
-
-    .carousel h3 {
-        font-size: 1.3rem;
-    }
-
-    .carousel p {
-        font-size: 0.9rem;
-    }
-
-    .btn-form a {
-        font-size: 1.3rem;
-        padding: 0.6rem 1.5rem;
+        max-width: 300px;
     }
 }
 
@@ -744,20 +699,8 @@ a.arearestrita {
         flex: 0 0 90%;
         max-width: 280px;
     }
-
-    .carousel h3 {
-        font-size: 1.2rem;
-    }
-
-    .carousel p {
-        font-size: 0.85rem;
-    }
-
-    .btn-form a {
-        font-size: 1.2rem;
-        padding: 0.5rem 1.2rem;
-    }
 }
+
 
 
 .bell-separator {
