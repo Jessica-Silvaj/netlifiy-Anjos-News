@@ -1049,84 +1049,41 @@ a.arearestrita {
 /* Nossos Profissionais */
 .profissionais-section {
     background-color: var(--rosa-fraco);
-    position: relative;
     text-align: center;
     padding: 40px 20px;
-    margin-top: -100px;
 }
 
-.profissionais-section .carousel {
-    position: relative;
-}
-
-.profissionais-section .carousel-item2 {
-    padding: 1rem;
+.carousel-item {
     text-align: center;
     background-color: var(--rosa-intenso);
-    box-shadow: 0 6px 12px var(--box-shadow);
-    box-sizing: border-box;
+    padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 6px 12px var(--box-shadow);
+    margin: 10px;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.profissionais-section .carousel-item2 img {
-    width: 90%; /* Ajuste a largura da imagem */
-    height: auto;
+.carousel-item img {
+    width: 100%;
+    height: 300px;
     border-radius: 10px;
-    margin-bottom: 1rem;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
-.profissionais-section .carousel h3 {
+.carousel-item h3 {
     font-size: 1.5rem;
     color: #fff;
-    margin-top: 10px;
-    line-height: 1.8;
 }
 
-.profissionais-section .carousel p {
+.carousel-item p {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.95);
-    line-height: 1.8;
-    padding: 1rem 0;
-}
-
-
-/* Media Queries para telas menores */
-@media (max-width: 768px) {
-    .profissionais-section {
-        padding: 30px 15px;
-    }
-
-    .profissionais-section .carousel-item2 {
-        width: 80%; /* Ajusta a largura para dispositivos menores */
-        margin: 0 1rem;
-    }
-
-    .profissionais-section .carousel h3 {
-        font-size: 1.2rem; /* Reduz o tamanho da fonte */
-    }
-
-    .profissionais-section .carousel p {
-        font-size: 12px; /* Ajusta o tamanho da fonte */
-    }
-}
-
-@media (max-width: 480px) {
-    .profissionais-section {
-        padding: 20px 10px;
-    }
-
-    .profissionais-section .carousel-item2 {
-        width: 100%; /* Deixa os itens ocupando toda a largura */
-        margin: 1rem 0;
-    }
-
-    .profissionais-section .carousel h3 {
-        font-size: 1rem; /* Ajusta o tamanho da fonte */
-    }
-
-    .profissionais-section .carousel p {
-        font-size: 11px; /* Ajusta o tamanho da fonte */
-    }
 }
 
 .skewed-section2 {
