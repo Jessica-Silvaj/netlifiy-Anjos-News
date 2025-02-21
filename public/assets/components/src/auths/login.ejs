@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ang="pt-br" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+<html lang="pt-br" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
     data-sidebar-image="none" data-preloader="disable" data-theme="default" data-theme-colors="default">
 
 <head>
@@ -17,19 +17,21 @@
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Entre para iniciar sua sessão</p>
-                <form action="/.netlify/functions/routes/login" method="get">
+                <form id="login-form" method="POST">
+                    <div class="error-container"></div>
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="E-mail" />
+                        <input type="email" id="email" class="form-control" placeholder="E-mail" />
                         <div class="input-group-text bg-body-rosa-forte"><span class="bi bi-envelope"></span></div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control " placeholder="Senha" />
-                        <div class="input-group-text bg-body-rosa-forte"><span class="bi bi-lock-fill "></span></div>
+                        <input type="password" id="senha" class="form-control" placeholder="Senha" />
+                        <div class="input-group-text bg-body-rosa-forte"><span class="bi bi-lock-fill"></span></div>
                     </div>
+
                     <div class="row">
                         <div class="col-12">
                             <div class="d-grid gap-2">
-                                <button type="submit" class="btn bg-body-rosa-forte"">Entrar</button>
+                                <button type="submit" class="btn bg-body-rosa-forte">Entrar</button>
                             </div>
                         </div>
                     </div>
@@ -38,8 +40,50 @@
         </div>
     </div>
     <div class="cloud cloud-1"></div>
-    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-1"></div>
     <%- include("layouts/footer") %>
-</body>
 
+    <script type="module">
+        import { addValidationListener, validateForm } from '/assets/components/js/generico/validacao.js';
+        
+        document.getElementById('login-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+    
+            const formId = 'login-form';
+    
+            // Verifica primeiro se o formulário é válido
+            if (!validateForm(formId)) return;
+    
+            // Se passou na validação, obtém os valores
+            const email = document.getElementById('email').value.trim();
+            const senha = document.getElementById('senha').value.trim();
+    
+            try {
+                const response = await fetch('/.netlify/functions/autenticacao/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, senha })
+                });
+    
+                const data = await response.json();
+    
+                // Se login for bem-sucedido, redireciona
+                if (data.success) {
+                    window.location.href = '/dashboard';
+                } else {
+                    document.querySelector('.error-container').textContent = data.message || 'Erro no login';
+                }
+    
+            } catch (error) {
+                console.error('Erro na requisição:', error);
+                document.querySelector('.error-container').textContent = 'Erro ao tentar fazer login. Tente novamente mais tarde.';
+            }
+        });
+    
+        // Adiciona o listener de validação
+        addValidationListener('login-form');
+    </script>
+    
+
+</body>
 </html>

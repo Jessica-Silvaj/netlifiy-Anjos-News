@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="./assets/site/css/style.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-    <!-- <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
@@ -73,8 +72,10 @@
                 <img src="../assets/site/images/noticias/IMG_0118.png" alt="Notícia 1">
                 <div class="post-content">
                     <h2>O Vô Apronta de Novo e Médica Enfrenta Processo Policial apos suposta facada!</h2>
-                    <p>Francisco Kalashnikov, conhecido como Vô do Caos, voltou a aprontar na Cidade dos Anjos! Ele foi flagrado socando pessoas sem motivo na praça, desfilando com uma catana nas costas e até roubando uma viatura na frente de uma policial.</p>
-                    <a href="https://www.youtube.com/watch?v=lj56CpZQU7w" target="_blank" class="btn">Saiba Mais</a>
+                    <p>Francisco Kalashnikov, conhecido como Vô do Caos, voltou a aprontar na Cidade dos Anjos! Ele foi
+                        flagrado socando pessoas sem motivo na praça, desfilando com uma catana nas costas e até
+                        roubando uma viatura na frente de uma policial.</p>
+                    <a href="https://www.youtube.com/watch?v=7RJ6aZ4WUZw" target="_blank" class="btn">Saiba Mais</a>
                 </div>
             </article>
             <article class="post-card">
@@ -127,13 +128,49 @@
     </section>
     <!-- End  Ultimas Noticias -->
 
+    <!-- Artigos -->
+    <!-- <section id="artigos" class="artigos-section">
+        <h1 class="heading">Últimos <span>Artigos</span></h1>
+        <div class="artigos-row with-6-posts">
+            <article class="artigos-card">
+                <img src="../assets/site/images/noticias/IMG_0118.png" alt="Artigo 1">
+                <div class="artigos-content">
+                    <h2>O Vô Apronta de Novo e Médica Enfrenta Processo Policial apos suposta facada!</h2>
+                    <p>Francisco Kalashnikov, conhecido como Vô do Caos, voltou a aprontar na Cidade dos Anjos! Ele foi
+                        flagrado socando pessoas sem motivo na praça, desfilando com uma catana nas costas e até
+                        roubando uma viatura na frente de uma policial.</p>
+                    <a href="/.netlify/functions/routes/artigo1" class="btn">Saiba Mais</a>
+                </div>
+            </article>
+            <article class="artigos-card">
+                <img src="../assets/site/images/noticias/panto.png" alt="Artigo 2">
+                <div class="artigos-content">
+                    <h2>Fuga de panto, Carro do ovo, Resposta do Space Cafe e Espanta Love</h2>
+                    <p>Quatorze bandidos sequestraram e assaltaram o banco central da cidade e negociaram com os
+                        policiais a libertação dos reféns em troca de uma fuga realizada em pantos</p>
+                    <a href="/.netlify/functions/routes/artigo2" class="btn">Saiba Mais</a>
+                </div>
+            </article>
+            <article class="artigos-card">
+                <img src="../assets/site/images/noticias/panto.png" alt="Artigo 3">
+                <div class="artigos-content">
+                    <h2>Fuga de panto, Carro do ovo, Resposta do Space Cafe e Espanta Love</h2>
+                    <p>Quatorze bandidos sequestraram e assaltaram o banco central da cidade e negociaram com os
+                        policiais a libertação dos reféns em troca de uma fuga realizada em pantos</p>
+                    <a href="/.netlify/functions/routes/artigo3" class="btn">Saiba Mais</a>
+                </div>
+            </article>
+        </div>
+    </section> -->
+    <!-- End Artigos -->
+
+
     <!-- Separador -->
     <div class="spikes"></div>
     <!-- End Separador  -->
 
     <!-- Eventos -->
     <section id="eventos" class="eventos-section">
-
         <h1 class="heading">Próximos <span>Eventos</span></h1>
         <div class="calendario-container">
             <div id="meses" class="meses"></div>
@@ -148,7 +185,7 @@
                 <img id="imagemEvento" src="" alt="Imagem do Evento">
                 <h2 id="tituloEvento"></h2>
                 <p id="descricaoEvento"></p>
-                <a class="btn" href="https://docs.google.com/document/d/1OgY1GFTbKMlUYmcBlMU7q-Wgg4oT7AC3Py18pfxkDf8/edit?tab=t.0" target="_blank" >Inscreva-se</a>
+                <a id="btnInscricao" class="btn" href="" target="_blank" style="display: none;">Inscreva-se</a>
             </div>
         </div>
     </section>
@@ -185,62 +222,74 @@
         <!-- Card Maior para os signos -->
         <div class="zodiac-big-card">
             <div class="zodiac-container">
-                <div class="zodiac-card" onclick="openModal('Empada', 'As pessoas nascidas sob o signo Empada são conhecidas por serem extremamente dedicadas ao trabalho, ao ponto de muitas vezes sacrificarem sua vida pessoal.')">
+                <div class="zodiac-card"
+                    onclick="openModal('Empada', 'As pessoas nascidas sob o signo Empada são conhecidas por serem extremamente dedicadas ao trabalho, ao ponto de muitas vezes sacrificarem sua vida pessoal.')">
                     <img src="./assets/site/images/HoroscopoRosa/empada.png" alt="Empada">
                     <strong>Empada</strong>
                     <div class="zodiac-description">Clique-me.</div>
                 </div>
-                <div class="zodiac-card" onclick="openModal('Mel', 'Pessoas do signo de Mel são conhecidas por sua serenidade e tranquilidade. Elas raramente perdem a paciência e são mestres em manter a compostura, mesmo em situações estressantes.')">
+                <div class="zodiac-card"
+                    onclick="openModal('Mel', 'Pessoas do signo de Mel são conhecidas por sua serenidade e tranquilidade. Elas raramente perdem a paciência e são mestres em manter a compostura, mesmo em situações estressantes.')">
                     <img src="./assets/site/images/HoroscopoRosa/mel.png" alt="Mel">
                     <strong>Mel</strong>
                     <div class="zodiac-description">Clique-me.</div>
                 </div>
-                <div class="zodiac-card" onclick="openModal('Stitch', 'As pessoas nascidas sob o signo Stitch são conhecidas por sua presença vibrante e marcante. Onde quer que estejam, elas conseguem se destacar e realçar sua imagem, chamando a atenção de todos ao redor. No entanto, essa energia muitas vezes se manifesta de forma explosiva. As pessoas do signo Stitch são intensas e podem mudar de humor rapidamente, essa intensidade pode levar a comportamentos impulsivos e, às vezes, destrutivos. Um traço marcante de alguns portadores desse signo é ludir e machucar uma bela flor.')">
+                <div class="zodiac-card"
+                    onclick="openModal('Stitch', 'As pessoas nascidas sob o signo Stitch são conhecidas por sua presença vibrante e marcante. Onde quer que estejam, elas conseguem se destacar e realçar sua imagem, chamando a atenção de todos ao redor. No entanto, essa energia muitas vezes se manifesta de forma explosiva. As pessoas do signo Stitch são intensas e podem mudar de humor rapidamente, essa intensidade pode levar a comportamentos impulsivos e, às vezes, destrutivos. Um traço marcante de alguns portadores desse signo é ludir e machucar uma bela flor.')">
                     <img src="./assets/site/images/HoroscopoRosa/Stitch.png" alt="Stitch">
                     <strong>Stitch</strong>
                     <div class="zodiac-description">Clique-me.</div>
                 </div>
-                <div class="zodiac-card" onclick="openModal('Flamingo', 'As pessoas nascidas sob o signo Flamingo são mestres do empoderamento, irradiando uma aura de força e autossuficiência que atrai a admiração de muitos. Este signo é marcado por uma forte lealdade, tanto em suas amizades quanto em relacionamentos amorosos. Quem tem um Flamingo ao seu lado sabe que pode contar com alguém que valoriza a confiança e a honestidade. No entanto, essa confiança pode, às vezes, se transformar em arrogância. É comum quando confrontados com situações desafiadoras ou críticas, os Flamingos tem comportamentos orgulhosos e autossuficiente, essa reatividade pode ser uma consequência de sua necessidade de defender sua autoestima e dignidade, pois são conhecidos por terem uma tendência a ter o ego inflado.')">
+                <div class="zodiac-card"
+                    onclick="openModal('Flamingo', 'As pessoas nascidas sob o signo Flamingo são mestres do empoderamento, irradiando uma aura de força e autossuficiência que atrai a admiração de muitos. Este signo é marcado por uma forte lealdade, tanto em suas amizades quanto em relacionamentos amorosos. Quem tem um Flamingo ao seu lado sabe que pode contar com alguém que valoriza a confiança e a honestidade. No entanto, essa confiança pode, às vezes, se transformar em arrogância. É comum quando confrontados com situações desafiadoras ou críticas, os Flamingos tem comportamentos orgulhosos e autossuficiente, essa reatividade pode ser uma consequência de sua necessidade de defender sua autoestima e dignidade, pois são conhecidos por terem uma tendência a ter o ego inflado.')">
                     <img src="./assets/site/images/HoroscopoRosa/flamingo.png" alt="Flamingo">
                     <strong>Flamingo</strong>
                     <div class="zodiac-description">Clique-me.</div>
                 </div>
-                <div class="zodiac-card" onclick="openModal('Cereja', 'As pessoas do signo Cereja são extrovertidas e adoram socializar. Mestres em curtição e festas, sabem como proporcionar uma boa diversão e criar um ambiente alegre. No entanto, tendem a falar muito e fazer pouco, tentando parecer mais impactantes do que realmente são. Muitas vezes, mostram-se grandiosas, mas na prática, entregam menos do que prometem.')">
+                <div class="zodiac-card"
+                    onclick="openModal('Cereja', 'As pessoas do signo Cereja são extrovertidas e adoram socializar. Mestres em curtição e festas, sabem como proporcionar uma boa diversão e criar um ambiente alegre. No entanto, tendem a falar muito e fazer pouco, tentando parecer mais impactantes do que realmente são. Muitas vezes, mostram-se grandiosas, mas na prática, entregam menos do que prometem.')">
                     <img src="./assets/site/images/HoroscopoRosa/cereja.png" alt="Cereja">
                     <strong>Cereja</strong>
                     <div class="zodiac-description">Clique-me.</div>
                 </div>
-                <div class="zodiac-card" onclick="openModal('Coala', 'As pessoas do signo Coala são extremamente dedicadas à família, confiáveis e diligentes, sempre concluindo o que começam. Ambiciosas e adaptáveis, estão constantemente buscando novas oportunidades e melhorias. No entanto, essa ambição pode causar insatisfação crônica, e a insistência em finalizar tudo pode fazê-los parecer inflexíveis, criando tensões em suas vidas e relacionamentos.')">
+                <div class="zodiac-card"
+                    onclick="openModal('Coala', 'As pessoas do signo Coala são extremamente dedicadas à família, confiáveis e diligentes, sempre concluindo o que começam. Ambiciosas e adaptáveis, estão constantemente buscando novas oportunidades e melhorias. No entanto, essa ambição pode causar insatisfação crônica, e a insistência em finalizar tudo pode fazê-los parecer inflexíveis, criando tensões em suas vidas e relacionamentos.')">
                     <img src="./assets/site/images/HoroscopoRosa/coala.png" alt="Coala">
                     <strong>Coala</strong>
                     <div class="zodiac-description">Clique-me.</div>
                 </div>
-                <div class="zodiac-card" onclick="openModal('Garfield', 'As pessoas do signo Garfield são compreensivas e justas, sempre procurando entender o ponto de vista dos outros e agir de maneira equilibrada em suas decisões. Possuem um senso de justiça que os torna bons conselheiros. Por outro lado, podem demonstrar uma certa indiferença e um humor sarcástico. Essa postura despreocupada pode ser percebida como uma brincadeira com os sentimentos alheios, mantendo um distanciamento emocional em algumas situações.')">
+                <div class="zodiac-card"
+                    onclick="openModal('Garfield', 'As pessoas do signo Garfield são compreensivas e justas, sempre procurando entender o ponto de vista dos outros e agir de maneira equilibrada em suas decisões. Possuem um senso de justiça que os torna bons conselheiros. Por outro lado, podem demonstrar uma certa indiferença e um humor sarcástico. Essa postura despreocupada pode ser percebida como uma brincadeira com os sentimentos alheios, mantendo um distanciamento emocional em algumas situações.')">
                     <img src="./assets/site/images/HoroscopoRosa/gato.png" alt="Garfield">
                     <strong>Garfield</strong>
                     <div class="zodiac-description">Clique-me.</div>
                 </div>
-                <div class="zodiac-card" onclick="openModal('Trevo', 'As pessoas do signo Trevo são experientes e cheias de energia. Estão sempre em movimento, adoram aventuras e sabem aproveitar ao máximo a vida, trazendo uma energia vibrante para tudo o que fazem, dificilmente passam despercebidos. No entanto, seu espírito inquieto pode torná-las astutas e imprevisíveis. São aventureiras e mestres em queimar pneu, não hesitam em passar a perna nos outros se conveniente, sempre buscando vantagem em qualquer situação.')">
+                <div class="zodiac-card"
+                    onclick="openModal('Trevo', 'As pessoas do signo Trevo são experientes e cheias de energia. Estão sempre em movimento, adoram aventuras e sabem aproveitar ao máximo a vida, trazendo uma energia vibrante para tudo o que fazem, dificilmente passam despercebidos. No entanto, seu espírito inquieto pode torná-las astutas e imprevisíveis. São aventureiras e mestres em queimar pneu, não hesitam em passar a perna nos outros se conveniente, sempre buscando vantagem em qualquer situação.')">
                     <img src="./assets/site/images/HoroscopoRosa/trevo.png" alt="Trevo">
-                    <strong>Trevo</strong>                    
+                    <strong>Trevo</strong>
                     <div class="zodiac-description">Clique-me.</div>
                 </div>
-                <div class="zodiac-card" onclick="openModal('Lavanda', 'As pessoas do signo Lavanda são profundamente ligadas à família e possuem um espírito livre. Valorizam a proximidade com os entes queridos, mas também apreciam a liberdade de explorar o mundo ao seu próprio ritmo. No entanto, podem ser bastante imprevisíveis e têm uma tendência a se afastar quando sentem que sua liberdade está sendo restringida. Podem preferir evitar confrontos diretos, optando por se retirar silenciosamente em vez de enfrentar problemas de frente.')">
+                <div class="zodiac-card"
+                    onclick="openModal('Lavanda', 'As pessoas do signo Lavanda são profundamente ligadas à família e possuem um espírito livre. Valorizam a proximidade com os entes queridos, mas também apreciam a liberdade de explorar o mundo ao seu próprio ritmo. No entanto, podem ser bastante imprevisíveis e têm uma tendência a se afastar quando sentem que sua liberdade está sendo restringida. Podem preferir evitar confrontos diretos, optando por se retirar silenciosamente em vez de enfrentar problemas de frente.')">
                     <img src="./assets/site/images/HoroscopoRosa/lavanda.png" alt="Lavanda">
                     <strong>Lavanda</strong>
                     <div class="zodiac-description">Clique-me.</div>
                 </div>
-                <div class="zodiac-card" onclick="openModal('Pomba', 'As pessoas do signo Pomba são conhecidas por sua elegância e tranquilidade. Possuem uma personalidade suave e discreta, preferindo a harmonia e a serenidade em suas interações, o que lhes confere um charme sutil. No entanto, tendem a superestimar suas capacidades, acreditando que possuem mais poder e influência do que realmente têm. Seu senso de autoridade é frágil, e uma crítica leve pode afetá-las mais do que imaginam, revelando uma vulnerabilidade por trás de sua aparente confiança')">
+                <div class="zodiac-card"
+                    onclick="openModal('Pomba', 'As pessoas do signo Pomba são conhecidas por sua elegância e tranquilidade. Possuem uma personalidade suave e discreta, preferindo a harmonia e a serenidade em suas interações, o que lhes confere um charme sutil. No entanto, tendem a superestimar suas capacidades, acreditando que possuem mais poder e influência do que realmente têm. Seu senso de autoridade é frágil, e uma crítica leve pode afetá-las mais do que imaginam, revelando uma vulnerabilidade por trás de sua aparente confiança')">
                     <img src="./assets/site/images/HoroscopoRosa/pomba.png" alt="Pomba">
                     <strong>Pomba</strong>
                     <div class="zodiac-description">Clique-me.</div>
                 </div>
-                <div class="zodiac-card" onclick="openModal('Luva', 'As pessoas do signo Luva são cuidadosas e prezam pela segurança dos outros, sempre agindo com bondade e consideração. Elas se preocupam genuinamente com o bem-estar alheio e tem disposição pra ajudar. No entanto, quando são realmente necessárias, tendem a resistir além da dificuldade em administrar o tempo. Essa falta de organização pode fazer com que não estejam disponíveis nos momentos mais críticos, apesar de suas boas intenções.')">
+                <div class="zodiac-card"
+                    onclick="openModal('Luva', 'As pessoas do signo Luva são cuidadosas e prezam pela segurança dos outros, sempre agindo com bondade e consideração. Elas se preocupam genuinamente com o bem-estar alheio e tem disposição pra ajudar. No entanto, quando são realmente necessárias, tendem a resistir além da dificuldade em administrar o tempo. Essa falta de organização pode fazer com que não estejam disponíveis nos momentos mais críticos, apesar de suas boas intenções.')">
                     <img src="./assets/site/images/HoroscopoRosa/luva.png" alt="Luva">
                     <strong>Luva</strong>
                     <div class="zodiac-description">Clique-me.</div>
                 </div>
-                <div class="zodiac-card" onclick="openModal('Vela', 'As pessoas do signo Vela são habilidosas e fortes, com uma capacidade impressionante de se concentrar em seus objetivos. Sua destreza e foco os tornam eficientes e determinados em tudo o que fazem. Por outro lado, sua falta de controle pode torná-las destrutivas e, às vezes, inconsequentes. Sem perceber, podem causar danos ao agir impulsivamente, comprometendo os resultados que tanto almejam.')">
+                <div class="zodiac-card"
+                    onclick="openModal('Vela', 'As pessoas do signo Vela são habilidosas e fortes, com uma capacidade impressionante de se concentrar em seus objetivos. Sua destreza e foco os tornam eficientes e determinados em tudo o que fazem. Por outro lado, sua falta de controle pode torná-las destrutivas e, às vezes, inconsequentes. Sem perceber, podem causar danos ao agir impulsivamente, comprometendo os resultados que tanto almejam.')">
                     <img src="./assets/site/images/HoroscopoRosa/vela.png" alt="Vela">
                     <strong>Vela</strong>
                     <div class="zodiac-description">Clique-me.</div>
@@ -429,8 +478,7 @@
 
             <div class="box">
                 <h3>Links Rápidos</h3>
-                <!-- <a href="/.netlify/functions/routes/login"><i class="bi bi-exclamation-octagon"></i>
-                    Área Restrita</a> -->
+                <!-- <a href="/.netlify/functions/routes/login"><i class="bi bi-exclamation-octagon"></i>Área Restrita</a> -->
             </div>
 
             <div class="box">
@@ -473,4 +521,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </body>
+
 </html>

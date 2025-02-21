@@ -14,6 +14,19 @@ router.get("/", (req, res) => {
     res.sendFile(path.join(publicPath, "index.html"));
 });
 
+router.get("/artigo1", (req, res) => {
+    res.sendFile(path.join(publicPath, "assets/site/src/artigos/artigo1.html"));
+});
+
+router.get("/artigo2", (req, res) => {
+    res.sendFile(path.join(publicPath, "assets/site/src/artigos/artigo2.html"));
+});
+
+router.get("/artigo3", (req, res) => {
+    res.sendFile(path.join(publicPath, "assets/site/src/artigos/artigo3.html"));
+});
+
+
 // 🔹 Configurar EJS apenas para login
 const viewsPathAuths = path.resolve(publicPath, "assets/components/src/auths/");
 app.set("view engine", "ejs");

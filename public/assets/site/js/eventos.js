@@ -1,22 +1,21 @@
-// Lista de eventos com descrição e imagem
 const eventos = [
-    // { data: '2025-02-22T00:00:00', nome: 'Evento Rally', descricao: 'O Rally é uma competição de motocross que ocorrerá no dia 22 de fevereiro, às 20h. O evento desafiará os pilotos a atravessar um percurso exigente, com uma montanha como principal obstáculo, e finalizará no Club FireWitches. O objetivo do rally é oferecer aos participantes uma experiência emocionante, com muito desafio e adrenalina, promovendo interação entre a comunidade e proporcionando momentos de diversão para todos os envolvidos.', imagem: '' },
-    // { data: '2025-03-05T00:00:00', nome: 'Evento 3 - Miss CDanjos', descricao: 'Descubra as novas candidatas!', imagem: '../assets/site/images/noticias/noticias.png' },
+    { data: '2025-02-22T00:00:00', nome: 'Evento Rally - Mec Los Anjos', descricao: 'O Rally é uma competição de motocross que ocorrerá no dia 22 de fevereiro, às 20h', imagem: '', link: 'https://docs.google.com/document/d/1OgY1GFTbKMlUYmcBlMU7q-Wgg4oT7AC3Py18pfxkDf8/edit?tab=t.0' },
+    // { data: '2025-02-26T00:00:00', nome: 'Evento Estoure o Balão - Anjos News', descricao: 'Em breve', imagem: '../assets/site/images/eventos/estoureBalao1.png', link: '' },
 ];
 
-// Referência ao modal
 const modal = document.getElementById('eventoModal');
 const tituloEvento = document.getElementById('tituloEvento');
 const descricaoEvento = document.getElementById('descricaoEvento');
 const imagemEvento = document.getElementById('imagemEvento');
-const contador = document.getElementById('contador');
+const btnInscricao = document.getElementById('btnInscricao');
 const fecharModal = document.querySelector('.fechar');
+const spikes = document.querySelector('.spikes');
+const triangle = document.querySelector('.triangle');
 
 // Função para gerar os meses e destacar o mês atual
 function gerarMeses() {
     const mesesDiv = document.getElementById('meses');
     const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
-
     const mesAtual = new Date().getMonth();
 
     meses.forEach((mes, index) => {
@@ -76,7 +75,17 @@ function abrirModal(evento) {
     descricaoEvento.textContent = evento.descricao;
     imagemEvento.src = evento.imagem;
 
-    // atualizarContagemRegressiva(new Date(evento.data));
+    // Verifica se o evento tem um link de inscrição
+    if (evento.link) {
+        btnInscricao.href = evento.link;
+        btnInscricao.style.display = 'inline-block'; // Exibe o botão de inscrição
+    } else {
+        btnInscricao.style.display = 'none'; // Esconde o botão de inscrição
+    }
+
+    // Esconde as seções spikes e triangle ao abrir o modal
+    if (spikes) spikes.style.display = 'none';
+    if (triangle) triangle.style.display = 'none';
 
     modal.style.display = 'flex';
 }
@@ -84,34 +93,22 @@ function abrirModal(evento) {
 // Fecha o modal
 fecharModal.addEventListener('click', () => {
     modal.style.display = 'none';
+
+    // Reexibe as seções spikes e triangle ao fechar o modal
+    if (spikes) spikes.style.display = 'block';
+    if (triangle) triangle.style.display = 'block';
 });
 
 // Fecha modal ao clicar fora
 window.addEventListener('click', (e) => {
     if (e.target === modal) {
         modal.style.display = 'none';
+
+        // Reexibe as seções spikes e triangle ao fechar o modal
+        if (spikes) spikes.style.display = 'block';
+        if (triangle) triangle.style.display = 'block';
     }
 });
-
-// Atualiza a contagem regressiva
-// function atualizarContagemRegressiva(dataEvento) {
-//     function atualizar() {
-//         const agora = new Date();
-//         const diferenca = dataEvento - agora;
-
-//         if (diferenca > 0) {
-//             const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
-//             const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//             const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
-//             const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
-//             contador.textContent = `${dias}d ${horas}h ${minutos}m ${segundos}s`;
-//         } else {
-//             contador.textContent = 'Evento em andamento!';
-//         }
-//     }
-//     atualizar();
-//     setInterval(atualizar, 1000);
-// }
 
 // Inicializa tudo
 gerarMeses();

@@ -17853,40 +17853,63 @@ html.maximized-card {
     width: 32px
 }
 
-.cloud{
+.cloud {
     position: absolute;
-    right: 0; 
     left: 0;
+    right: 0;
     height: 18rem;
     background-size: 250rem 18rem;
-    background:url(/assets/site/images/cloud.png) repeat-x;
+    background: url(/assets/site/images/cloud.png) repeat-x;
     animation: cloud 10s linear infinite;
     z-index: 5;
-    bottom: 1px;
+    bottom: 0; /* Ajusta para que as nuvens fiquem no rodapé */
+  }
 
-}
-
-
-@keyframes cloud{
-    0%{
-        background-position-x: 0rem;
+  @keyframes cloud {
+    0% {
+      background-position-x: 0rem;
     }
-    100%{
-        background-position-x: -250rem;
+    100% {
+      background-position-x: -250rem;
     }
-}
-.cloud-1{
-    opacity: .5;
-    height:20rem;
+  }
+
+  .cloud-1 {
+    opacity: 0.5;
+    height: 16rem;
     background-size: 250rem 20rem;
     animation-direction: reverse;
     animation-duration: 15s;
+    bottom: 0; /* Garantir que a cloud-1 também fique no rodapé */
 }
+
 .cloud-2 {
-    opacity: 0.3;
-    height: 15rem;
+    opacity: 0.2;
+    height: 13rem;
     background-size: 200rem 15rem;
-    bottom: -7rem;
+    bottom: 0; /* Colocar no rodapé */
     animation-duration: 18s;
+}
+
+.is-invalid {
+    border: 2px solid red !important;
+    background-color: #ffe6e6 !important;
+}
+
+.error-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center; /* Centraliza a mensagem de erro */
+}
+
+.error-message {
+    font-size: 14px;
+    color: red;
+}
+
+.input-group input:focus {
+    border: 2px solid #ccc;
+    background-color: white;
 }
 /*# sourceMappingURL=adminlte.min.css.map */
