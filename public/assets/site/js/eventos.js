@@ -1,6 +1,6 @@
 const eventos = [
-    { data: '2025-02-22T00:00:00', nome: 'Evento Rally - Mec Los Anjos', descricao: 'O Rally é uma competição de motocross que ocorrerá no dia 22 de fevereiro, às 20h', imagem: '', link: 'https://docs.google.com/document/d/1OgY1GFTbKMlUYmcBlMU7q-Wgg4oT7AC3Py18pfxkDf8/edit?tab=t.0' },
-    // { data: '2025-02-26T00:00:00', nome: 'Evento Estoure o Balão - Anjos News', descricao: 'Em breve', imagem: '../assets/site/images/eventos/estoureBalao1.png', link: '' },
+    { data: '2025-02-22T00:00:00', nome: 'Evento Rally - Mec Los Anjos', descricao: 'O Rally é uma competição de motocross que ocorrerá no dia 22 de fevereiro, às 20h', imagem: '../assets/site/images/eventos/image-169.png', link: 'https://docs.google.com/document/d/1OgY1GFTbKMlUYmcBlMU7q-Wgg4oT7AC3Py18pfxkDf8/edit?tab=t.0' },
+    // { data: '2025-02-26T00:00:00', nome: 'Evento Estoure o Balão - Anjos News', descricao: 'Em breve', imagem: '../assets/site/images/eventos/image1.png', link: 'https://docs.google.com/forms/d/e/1FAIpQLSdLYq8Q2DSggfStYw24dCpqk9pIY9ar75RsBUYKx25Ktg6-1Q/viewform?usp=sharing' },
 ];
 
 const modal = document.getElementById('eventoModal');
