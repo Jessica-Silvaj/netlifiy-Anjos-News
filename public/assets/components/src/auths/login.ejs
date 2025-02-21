@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ang="pt-br" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+    data-sidebar-image="none" data-preloader="disable" data-theme="default" data-theme-colors="default">
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <%- include("layouts/head") %>
+</head>
+
+<body class="login-page bg-body-rosa-fraco">
+    <div class="login-box">
+        <div class="login-logo">
+            <a class=""><img src="/assets/site/images/logo.png" alt="Logo"></a>
+        </div>
+        <div class="card">
+            <div class="card-body login-card-body">
+                <p class="login-box-msg">Entre para iniciar sua sessão</p>
+                <form action="/.netlify/functions/routes/login" method="get">
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="E-mail" />
+                        <div class="input-group-text bg-body-rosa-forte"><span class="bi bi-envelope"></span></div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control " placeholder="Senha" />
+                        <div class="input-group-text bg-body-rosa-forte"><span class="bi bi-lock-fill "></span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn bg-body-rosa-forte"">Entrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <%- include("layouts/footer") %>
+</body>
+
+</html>

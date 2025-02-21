@@ -5,18 +5,25 @@ const serverless = require("serverless-http");
 const app = express();
 const router = express.Router();
 
-app.use(express.static(path.join(__dirname, "../public")));
+// Definir caminho da pasta pública corretamente
+const publicPath = path.join(__dirname, "../public");
+app.use(express.static(publicPath));
 
-// Rota para o index
+// ✅ Rota para a página inicial
 router.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname,"../../public/index.html"))
+    res.sendFile(path.join(publicPath, "index.html"));
 });
 
-router.get("/teste", (req, res) => {
-    res.sendFile(path.join(__dirname,"../../public/teste.html"))
+// 🔹 Configurar EJS apenas para login
+const viewsPathAuths = path.resolve(publicPath, "assets/components/src/auths/");
+app.set("view engine", "ejs");
+app.set("views", viewsPathAuths);
+
+// ✅ Rota para a página de login (usando EJS)
+router.get("/login", (req, res) => {
+    res.render("login", { title: "Login" });
 });
 
-// Adicione mais rotas aqui, se necessário
 
 app.use("/.netlify/functions/routes", router);
 

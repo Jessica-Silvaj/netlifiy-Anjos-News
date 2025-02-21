@@ -1,6 +1,6 @@
 // Lista de eventos com descrição e imagem
 const eventos = [
-    // { data: '2025-02-18T00:00:00', nome: 'Evento 2 - Miss CDanjos', descricao: 'O maior concurso de beleza!', imagem: '../assets/site/images/noticias/noticias.png' },
+    // { data: '2025-02-22T00:00:00', nome: 'Evento Rally', descricao: 'O Rally é uma competição de motocross que ocorrerá no dia 22 de fevereiro, às 20h. O evento desafiará os pilotos a atravessar um percurso exigente, com uma montanha como principal obstáculo, e finalizará no Club FireWitches. O objetivo do rally é oferecer aos participantes uma experiência emocionante, com muito desafio e adrenalina, promovendo interação entre a comunidade e proporcionando momentos de diversão para todos os envolvidos.', imagem: '' },
     // { data: '2025-03-05T00:00:00', nome: 'Evento 3 - Miss CDanjos', descricao: 'Descubra as novas candidatas!', imagem: '../assets/site/images/noticias/noticias.png' },
 ];
 
